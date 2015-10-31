@@ -6,6 +6,7 @@
 //  Copyright © 2015 Casper. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 struct Alarm {
@@ -28,5 +29,12 @@ class AlarmManager {
         notification.soundName = UILocalNotificationDefaultSoundName // or a file name in the main bundle (< 30sec)
 //        notification.userInfo = ["alarm": alarm] // need an ObjC object
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    }
+
+    // Creates UILocalNotifcations for a given list of NSDates.
+    func setAlarms(dates: Array<NSDate>) {
+        for date in dates {
+            schedule(Alarm(time:date))
+        }
     }
 }
