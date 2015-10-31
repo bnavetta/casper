@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B56CA8211BE5520D007B6A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8201BE5520D007B6A6E /* AppDelegate.swift */; };
+		B56CA8231BE5520D007B6A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8221BE5520D007B6A6E /* ViewController.swift */; };
+		B56CA8261BE5520D007B6A6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8241BE5520D007B6A6E /* Main.storyboard */; };
+		B56CA8281BE5520D007B6A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8271BE5520D007B6A6E /* Assets.xcassets */; };
+		B56CA82B1BE5520D007B6A6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8291BE5520D007B6A6E /* LaunchScreen.storyboard */; };
+		B56CA8361BE5520D007B6A6E /* CasperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8351BE5520D007B6A6E /* CasperTests.swift */; };
+		B56CA8411BE5520D007B6A6E /* CasperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8401BE5520D007B6A6E /* CasperUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B56CA8321BE5520D007B6A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B56CA8151BE5520C007B6A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B56CA81C1BE5520C007B6A6E;
+			remoteInfo = Casper;
+		};
+		B56CA83D1BE5520D007B6A6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B56CA8151BE5520C007B6A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B56CA81C1BE5520C007B6A6E;
+			remoteInfo = Casper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B56CA81D1BE5520D007B6A6E /* Casper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56CA8201BE5520D007B6A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B56CA8221BE5520D007B6A6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B56CA8251BE5520D007B6A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B56CA8271BE5520D007B6A6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B56CA82A1BE5520D007B6A6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B56CA82C1BE5520D007B6A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56CA8311BE5520D007B6A6E /* CasperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56CA8351BE5520D007B6A6E /* CasperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasperTests.swift; sourceTree = "<group>"; };
+		B56CA8371BE5520D007B6A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B56CA83C1BE5520D007B6A6E /* CasperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CasperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56CA8401BE5520D007B6A6E /* CasperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CasperUITests.swift; sourceTree = "<group>"; };
+		B56CA8421BE5520D007B6A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B56CA81A1BE5520C007B6A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA82E1BE5520D007B6A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA8391BE5520D007B6A6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B56CA8141BE5520C007B6A6E = {
+			isa = PBXGroup;
+			children = (
+				B56CA81F1BE5520D007B6A6E /* Casper */,
+				B56CA8341BE5520D007B6A6E /* CasperTests */,
+				B56CA83F1BE5520D007B6A6E /* CasperUITests */,
+				B56CA81E1BE5520D007B6A6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B56CA81E1BE5520D007B6A6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B56CA81D1BE5520D007B6A6E /* Casper.app */,
+				B56CA8311BE5520D007B6A6E /* CasperTests.xctest */,
+				B56CA83C1BE5520D007B6A6E /* CasperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B56CA81F1BE5520D007B6A6E /* Casper */ = {
+			isa = PBXGroup;
+			children = (
+				B56CA8201BE5520D007B6A6E /* AppDelegate.swift */,
+				B56CA8221BE5520D007B6A6E /* ViewController.swift */,
+				B56CA8241BE5520D007B6A6E /* Main.storyboard */,
+				B56CA8271BE5520D007B6A6E /* Assets.xcassets */,
+				B56CA8291BE5520D007B6A6E /* LaunchScreen.storyboard */,
+				B56CA82C1BE5520D007B6A6E /* Info.plist */,
+			);
+			path = Casper;
+			sourceTree = "<group>";
+		};
+		B56CA8341BE5520D007B6A6E /* CasperTests */ = {
+			isa = PBXGroup;
+			children = (
+				B56CA8351BE5520D007B6A6E /* CasperTests.swift */,
+				B56CA8371BE5520D007B6A6E /* Info.plist */,
+			);
+			path = CasperTests;
+			sourceTree = "<group>";
+		};
+		B56CA83F1BE5520D007B6A6E /* CasperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B56CA8401BE5520D007B6A6E /* CasperUITests.swift */,
+				B56CA8421BE5520D007B6A6E /* Info.plist */,
+			);
+			path = CasperUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B56CA81C1BE5520C007B6A6E /* Casper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56CA8451BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "Casper" */;
+			buildPhases = (
+				B56CA8191BE5520C007B6A6E /* Sources */,
+				B56CA81A1BE5520C007B6A6E /* Frameworks */,
+				B56CA81B1BE5520C007B6A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Casper;
+			productName = Casper;
+			productReference = B56CA81D1BE5520D007B6A6E /* Casper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B56CA8301BE5520D007B6A6E /* CasperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56CA8481BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperTests" */;
+			buildPhases = (
+				B56CA82D1BE5520D007B6A6E /* Sources */,
+				B56CA82E1BE5520D007B6A6E /* Frameworks */,
+				B56CA82F1BE5520D007B6A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B56CA8331BE5520D007B6A6E /* PBXTargetDependency */,
+			);
+			name = CasperTests;
+			productName = CasperTests;
+			productReference = B56CA8311BE5520D007B6A6E /* CasperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B56CA83B1BE5520D007B6A6E /* CasperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B56CA84B1BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperUITests" */;
+			buildPhases = (
+				B56CA8381BE5520D007B6A6E /* Sources */,
+				B56CA8391BE5520D007B6A6E /* Frameworks */,
+				B56CA83A1BE5520D007B6A6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B56CA83E1BE5520D007B6A6E /* PBXTargetDependency */,
+			);
+			name = CasperUITests;
+			productName = CasperUITests;
+			productReference = B56CA83C1BE5520D007B6A6E /* CasperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B56CA8151BE5520C007B6A6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Casper;
+				TargetAttributes = {
+					B56CA81C1BE5520C007B6A6E = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					B56CA8301BE5520D007B6A6E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = B56CA81C1BE5520C007B6A6E;
+					};
+					B56CA83B1BE5520D007B6A6E = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = B56CA81C1BE5520C007B6A6E;
+					};
+				};
+			};
+			buildConfigurationList = B56CA8181BE5520C007B6A6E /* Build configuration list for PBXProject "Casper" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B56CA8141BE5520C007B6A6E;
+			productRefGroup = B56CA81E1BE5520D007B6A6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B56CA81C1BE5520C007B6A6E /* Casper */,
+				B56CA8301BE5520D007B6A6E /* CasperTests */,
+				B56CA83B1BE5520D007B6A6E /* CasperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B56CA81B1BE5520C007B6A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56CA82B1BE5520D007B6A6E /* LaunchScreen.storyboard in Resources */,
+				B56CA8281BE5520D007B6A6E /* Assets.xcassets in Resources */,
+				B56CA8261BE5520D007B6A6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA82F1BE5520D007B6A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA83A1BE5520D007B6A6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B56CA8191BE5520C007B6A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56CA8231BE5520D007B6A6E /* ViewController.swift in Sources */,
+				B56CA8211BE5520D007B6A6E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA82D1BE5520D007B6A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56CA8361BE5520D007B6A6E /* CasperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B56CA8381BE5520D007B6A6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56CA8411BE5520D007B6A6E /* CasperUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B56CA8331BE5520D007B6A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B56CA81C1BE5520C007B6A6E /* Casper */;
+			targetProxy = B56CA8321BE5520D007B6A6E /* PBXContainerItemProxy */;
+		};
+		B56CA83E1BE5520D007B6A6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B56CA81C1BE5520C007B6A6E /* Casper */;
+			targetProxy = B56CA83D1BE5520D007B6A6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B56CA8241BE5520D007B6A6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B56CA8251BE5520D007B6A6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B56CA8291BE5520D007B6A6E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B56CA82A1BE5520D007B6A6E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B56CA8431BE5520D007B6A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B56CA8441BE5520D007B6A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B56CA8461BE5520D007B6A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Casper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B56CA8471BE5520D007B6A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Casper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B56CA8491BE5520D007B6A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CasperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.CasperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Casper.app/Casper";
+			};
+			name = Debug;
+		};
+		B56CA84A1BE5520D007B6A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = CasperTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.CasperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Casper.app/Casper";
+			};
+			name = Release;
+		};
+		B56CA84C1BE5520D007B6A6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CasperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.CasperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Casper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		B56CA84D1BE5520D007B6A6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = CasperUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.CasperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Casper;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B56CA8181BE5520C007B6A6E /* Build configuration list for PBXProject "Casper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56CA8431BE5520D007B6A6E /* Debug */,
+				B56CA8441BE5520D007B6A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B56CA8451BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "Casper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56CA8461BE5520D007B6A6E /* Debug */,
+				B56CA8471BE5520D007B6A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B56CA8481BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56CA8491BE5520D007B6A6E /* Debug */,
+				B56CA84A1BE5520D007B6A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B56CA84B1BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B56CA84C1BE5520D007B6A6E /* Debug */,
+				B56CA84D1BE5520D007B6A6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B56CA8151BE5520C007B6A6E /* Project object */;
+}
