@@ -15,3 +15,12 @@ Basic idea: gradual alarm clock app
 
 * Minimalistic - not a lot of options / buttons
 * Super minimalist learning curve
+
+# Alarm Notifications
+
+* Schedule all the notifications at once
+    * 5 or so different notifications to gradually wake person up (i.e. different sounds)
+        * Staggered
+    * Different repeat intervals for each one
+    * Will gradually build on each other to be continuous by the end
+* Typing in the code -> cancel all notifications
