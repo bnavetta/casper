@@ -15,7 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        print(application.currentUserNotificationSettings())
         application.registerUserNotificationSettings(
             UIUserNotificationSettings(forTypes: [ .Alert, .Sound, .Badge], categories: nil))
         
