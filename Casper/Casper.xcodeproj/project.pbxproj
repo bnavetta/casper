@@ -16,6 +16,7 @@
 		B56CA8411BE5520D007B6A6E /* CasperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8401BE5520D007B6A6E /* CasperUITests.swift */; };
 		B56CA84F1BE555F9007B6A6E /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA84E1BE555F9007B6A6E /* AlarmManager.swift */; };
 		B56CA8511BE57808007B6A6E /* NotificationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8501BE57808007B6A6E /* NotificationUtils.swift */; };
+		E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6840A1BE584EB008CE732 /* AlarmDates.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B56CA8421BE5520D007B6A6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B56CA84E1BE555F9007B6A6E /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		B56CA8501BE57808007B6A6E /* NotificationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtils.swift; sourceTree = "<group>"; };
+		E1E6840A1BE584EB008CE732 /* AlarmDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				B56CA82C1BE5520D007B6A6E /* Info.plist */,
 				B56CA84E1BE555F9007B6A6E /* AlarmManager.swift */,
 				B56CA8501BE57808007B6A6E /* NotificationUtils.swift */,
+				E1E6840A1BE584EB008CE732 /* AlarmDates.swift */,
 			);
 			path = Casper;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				B56CA8231BE5520D007B6A6E /* ViewController.swift in Sources */,
 				B56CA8211BE5520D007B6A6E /* AppDelegate.swift in Sources */,
+				E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */,
 				B56CA8511BE57808007B6A6E /* NotificationUtils.swift in Sources */,
 				B56CA84F1BE555F9007B6A6E /* AlarmManager.swift in Sources */,
 			);
