@@ -13,10 +13,8 @@ import Foundation
 //       number of seconds after wake-up time an alarm is set to go off
 func distances(num: Double) -> Array<NSTimeInterval> {
     var fSeq = [1.0,1.0]
-    while fSeq.last < num {
-        if fSeq[fSeq.count - 2] + fSeq.last! <= num {
-            fSeq.append(fSeq[fSeq.count - 2] + fSeq.last!)
-        }
+    while (fSeq[fSeq.count - 2] + fSeq.last!) <= num {
+        fSeq.append(fSeq[fSeq.count - 2] + fSeq.last!)
     }
     let scalar = fSeq.last! / num
     for (index, element) in fSeq.enumerate() {

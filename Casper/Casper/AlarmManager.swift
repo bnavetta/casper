@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 struct Alert {
-    let timeBefore: NSTimeInterval // how long before the start date to start sending this alert
+    let timeBefore: Int // how many minutes before to start sending notifications
     let interval: Int // time between notifications, in minutes
     let soundName: String
 }
@@ -23,12 +23,24 @@ struct Alarm {
 class AlarmManager {
     static let sharedInstance = AlarmManager()
     
+    private static let dateFormatter: NSDateFormatter = {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .NoStyle
+        dateFormatter.timeStyle = .MediumStyle
+        dateFormatter.timeZone = NSTimeZone.localTimeZone()
+        return dateFormatter
+    }();
+    
     private func createNotifications(alert: Alert, alarm: Alarm) {
-        for schedule in notificationSchedules(alarm.time.dateByAddingTimeInterval(-alert.timeBefore), interval: alert.interval) {
-            
-            if schedule.fireDate.compare(NSDate()) == .OrderedDescending {
+        let calendar = NSCalendar.autoupdatingCurrentCalendar()
+        let startTime = calendar.dateByAddingUnit(.Minute, value: -alert.timeBefore, toDate: alarm.time, options: .MatchStrictly)!
+        for schedule in notificationSchedules(startTime, interval: alert.interval) {
+            if schedule.fireDate.compare(NSDate()) == .OrderedAscending {
+                // Don't schedule notifications that would be in the past
                 continue;
             }
+            
+            print("Notification scheduled at \(AlarmManager.dateFormatter.stringFromDate(schedule.fireDate))")
             
             let notification = UILocalNotification()
             notification.fireDate = schedule.fireDate
@@ -36,7 +48,6 @@ class AlarmManager {
             notification.alertTitle = "Wake Up"
             notification.alertBody = "Casper wants you to get up!"
             notification.category = "ALARM"
-//            notification.repeatInterval = schedule.repeatInterval
             notification.soundName = alert.soundName
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
@@ -44,8 +55,8 @@ class AlarmManager {
     
     func schedule(alarm: Alarm) {
         for timeBefore in distances(Double(alarm.warmupTime)) {
-            print("Scheduling \(timeBefore) minutes before")
-            let alert = Alert(timeBefore: timeBefore, interval: 0, soundName: UILocalNotificationDefaultSoundName)
+            let minutesBefore = -Int(round(timeBefore/60))
+            let alert = Alert(timeBefore: minutesBefore, interval: 1, soundName: UILocalNotificationDefaultSoundName)
             createNotifications(alert, alarm: alarm)
         }
     }

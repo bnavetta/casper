@@ -22,9 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Launched from notification: \(notification)")
         }
        
-        let alarm = Alarm(time: NSDate(timeIntervalSinceNow: 10*60), warmupTime: 20)
+        let alarm = Alarm(time: NSDate(timeIntervalSinceNow: 20*60), warmupTime: 20)
         AlarmManager.sharedInstance.schedule(alarm)
-        print("Notifications: \(UIApplication.sharedApplication().scheduledLocalNotifications)")
         
         return true
     }
