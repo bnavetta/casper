@@ -15,12 +15,32 @@ class AlarmViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("Alarm: \(alarm)")
-        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        AppDelegate.currentViewController = self
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        if !AlarmManager.sharedInstance.alarmScheduled() {
+            print("No alarm set, returning to home screen")
+            self.performSegueWithIdentifier("goHome", sender: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if identifier == "wakeUp" {
+                if let alarm = sender as? Alarm, vc = segue.destinationViewController as? WakeupViewController {
+                    vc.alarm = alarm
+                }
+            }
+        }
     }
 }
 
