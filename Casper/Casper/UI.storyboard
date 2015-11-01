@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Set Alarm-->
@@ -47,11 +48,12 @@
                     <connections>
                         <outlet property="timePicker" destination="qqD-Jf-crE" id="wc6-jS-yOc"/>
                         <segue destination="IyX-nK-9js" kind="show" identifier="showAlarm" id="mGL-48-EUQ"/>
+                        <segue destination="H8x-Xh-ppm" kind="show" identifier="wakeUp" id="clu-qY-KKq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tEC-6g-9si" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-652" y="1046"/>
+            <point key="canvasLocation" x="-458" y="952"/>
         </scene>
         <!--Alarm-->
         <scene sceneID="Hdl-gW-yPs">
@@ -69,20 +71,96 @@
                                 <rect key="frame" x="254" y="290" width="92.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="casper" translatesAutoresizingMaskIntoConstraints="NO" id="cHu-im-mmp">
+                                <rect key="frame" x="180" y="318" width="240" height="262"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cHu-im-mmp" firstAttribute="top" secondItem="MJT-hz-sCI" secondAttribute="bottom" constant="8" id="7lE-IS-Ntz"/>
                             <constraint firstItem="MJT-hz-sCI" firstAttribute="centerX" secondItem="U6j-qM-Aqz" secondAttribute="centerX" id="SkB-gb-lk6"/>
                             <constraint firstItem="MJT-hz-sCI" firstAttribute="centerY" secondItem="U6j-qM-Aqz" secondAttribute="centerY" id="mHP-H6-LKP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="H8x-Xh-ppm" kind="show" identifier="wakeUp" id="jRe-J6-NCm"/>
+                        <segue destination="M8a-Us-z70" kind="show" identifier="goHome" id="nMJ-xC-BH4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="11w-Dk-Obq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="325" y="185"/>
+        </scene>
+        <!--Wakeup View Controller-->
+        <scene sceneID="1vH-OT-8EL">
+            <objects>
+                <viewController storyboardIdentifier="wakeupVC" id="H8x-Xh-ppm" customClass="WakeupViewController" customModule="Casper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IO8-hu-ryy"/>
+                        <viewControllerLayoutGuide type="bottom" id="RUF-CE-GAt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IKt-Tv-E7G">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type &quot;word&quot; to prove you're awake" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9f-PS-QKW">
+                                <rect key="frame" x="168" y="215" width="264.5" height="20.5"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Are you awake?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dgS-NX-91F">
+                                <rect key="frame" x="240" y="243" width="121.5" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="triggerValidation:" destination="H8x-Xh-ppm" eventType="valueChanged" id="0KO-1N-OnE"/>
+                                    <action selector="triggerValidation:" destination="H8x-Xh-ppm" eventType="editingDidEnd" id="wdq-I1-OSR"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGH-fo-7oM">
+                                <rect key="frame" x="279" y="281" width="42" height="30"/>
+                                <animations/>
+                                <state key="normal" title="I'm up"/>
+                                <connections>
+                                    <action selector="triggerValidation:" destination="H8x-Xh-ppm" eventType="touchUpInside" id="3ky-9j-nkD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H9f-PS-QKW" firstAttribute="centerX" secondItem="IKt-Tv-E7G" secondAttribute="centerX" id="KVJ-YC-bPH"/>
+                            <constraint firstItem="tGH-fo-7oM" firstAttribute="centerX" secondItem="IKt-Tv-E7G" secondAttribute="centerX" id="VEs-dW-fkL"/>
+                            <constraint firstItem="H9f-PS-QKW" firstAttribute="centerY" secondItem="IKt-Tv-E7G" secondAttribute="centerY" multiplier="0.75" id="XAU-aU-kTR"/>
+                            <constraint firstItem="dgS-NX-91F" firstAttribute="top" secondItem="H9f-PS-QKW" secondAttribute="bottom" constant="8" id="fwm-Y0-3wp"/>
+                            <constraint firstItem="tGH-fo-7oM" firstAttribute="top" secondItem="dgS-NX-91F" secondAttribute="bottom" constant="8" id="hXk-hH-vq2"/>
+                            <constraint firstItem="dgS-NX-91F" firstAttribute="centerX" secondItem="IKt-Tv-E7G" secondAttribute="centerX" id="zzz-fm-TFH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enteredText" destination="dgS-NX-91F" id="irR-oC-s0s"/>
+                        <outlet property="instructions" destination="H9f-PS-QKW" id="2Sy-zv-sb4"/>
+                        <segue destination="M8a-Us-z70" kind="show" identifier="goHome" id="hpN-9f-Lna"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Yg-Su-KsU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="318" y="777"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="casper" width="750" height="750"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="hpN-9f-Lna"/>
+        <segue reference="jRe-J6-NCm"/>
+    </inferredMetricsTieBreakers>
 </document>

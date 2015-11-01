@@ -9,13 +9,20 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, AlarmManagerDelegate {
 
     var window: UIWindow?
+    
+    var currentProofCallback: (Bool -> ())?
+    
+    // really terrible hack, but AppDelegate is where notifications go to, and it can't reliably get at the current
+    // view controller for a segue
+    static var currentViewController: UIViewController?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        application.registerUserNotificationSettings(
-            UIUserNotificationSettings(forTypes: [ .Alert, .Sound, .Badge], categories: nil))
+        
+        AlarmManager.sharedInstance.configureNotifications(application)
+        AlarmManager.sharedInstance.delegate = self
         
         if let launchOptions = launchOptions, notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] {
             print("Launched from notification: \(notification)")
@@ -26,6 +33,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        print("Handling \(identifier) for \(notification)")
+        if let identifier = identifier {
+            AlarmManager.sharedInstance.handleAction(identifier, notification: notification)
+        }
+        completionHandler()
+    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -34,6 +49,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         print("Got local notification: \(notification)")
+        if let category = notification.category {
+            // hacks
+            if category == "done" {
+                AlarmManager.sharedInstance.handleAction("complete", notification: notification)
+            }
+        }
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
@@ -53,6 +74,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    func alarmDidComplete(alarm: Alarm, proofCallback: Bool -> ()) {
+//        if let currentVC = window?.rootViewController {
+//            currentProofCallback = proofCallback
+////            currentVC.performSegueWithIdentifier("wakeUp", sender: alarm)
+//            let storyboard = UIStoryboard(name: "UI", bundle: nil)
+//            let wakeupVC = storyboard.instantiateViewControllerWithIdentifier("wakeupVC") as! WakeupViewController
+//            wakeupVC.alarm = alarm
+//            currentVC.presentViewController(wakeupVC, animated: true, completion: nil)
+//        }
+        currentProofCallback = proofCallback
+        AppDelegate.currentViewController?.performSegueWithIdentifier("wakeUp", sender: alarm)
+    }
+    
+    func proofCompleted(success: Bool) {
+        currentProofCallback?(success)
+        if success && !(AppDelegate.currentViewController is ViewController) {
+            AppDelegate.currentViewController?.performSegueWithIdentifier("goHome", sender: nil)
+        }
+    }
 }
 
