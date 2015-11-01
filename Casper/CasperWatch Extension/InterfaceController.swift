@@ -12,10 +12,15 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var image: WKInterfaceImage!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
         // Configure interface objects here.
+        image.setImageNamed("casper")
+        image.setWidth(300)
+        image.setHeight(300)
     }
 
     override func willActivate() {

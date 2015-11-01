@@ -58,7 +58,8 @@ class AlarmManager {
     func schedule(alarm: Alarm) {
         for timeBefore in distances(Double(alarm.warmupTime)) {
             let minutesBefore = -Int(round(timeBefore/60))
-            let alert = Alert(timeBefore: minutesBefore, interval: 1, soundName: UILocalNotificationDefaultSoundName)
+            // TODO: origin
+            let alert = Alert(timeBefore: minutesBefore, interval: 1, soundName: "sound.caf"/*UILocalNotificationDefaultSoundName*/)
             createNotifications(alert, alarm: alarm)
         }
     }

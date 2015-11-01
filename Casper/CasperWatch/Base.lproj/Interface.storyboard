@@ -8,7 +8,14 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CasperWatch" customModuleProvider="target"/>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="CasperWatch" customModuleProvider="target">
+                    <items>
+                        <imageView height="158" alignment="left" image="casper" contentMode="scaleAspectFit" id="0hJ-LR-YiG"/>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="0hJ-LR-YiG" id="Rqq-NS-GE2"/>
+                    </connections>
+                </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>
         </scene>

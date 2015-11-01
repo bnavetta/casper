@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B55EB4E31BE6090400EA6136 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = B55EB4E21BE6090400EA6136 /* sound.caf */; };
 		B56CA8211BE5520D007B6A6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8201BE5520D007B6A6E /* AppDelegate.swift */; };
 		B56CA8231BE5520D007B6A6E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8221BE5520D007B6A6E /* ViewController.swift */; };
 		B56CA8281BE5520D007B6A6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8271BE5520D007B6A6E /* Assets.xcassets */; };
@@ -25,6 +26,8 @@
 		B5E3B4341BE5F4A900E6865E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3B4331BE5F4A900E6865E /* NotificationController.swift */; };
 		B5E3B4361BE5F4A900E6865E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B4351BE5F4A900E6865E /* Assets.xcassets */; };
 		B5E3B43A1BE5F4A900E6865E /* CasperWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B5E3B41C1BE5F4A900E6865E /* CasperWatch.app */; };
+		B5E3B4431BE606F900E6865E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B4211BE5F4A900E6865E /* Assets.xcassets */; };
+		B5E3B4441BE606FD00E6865E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B4351BE5F4A900E6865E /* Assets.xcassets */; };
 		E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6840A1BE584EB008CE732 /* AlarmDates.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +88,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B55EB4E21BE6090400EA6136 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.caf; path = ../sound.caf; sourceTree = "<group>"; };
 		B56CA81D1BE5520D007B6A6E /* Casper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B56CA8201BE5520D007B6A6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B56CA8221BE5520D007B6A6E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -150,6 +154,7 @@
 		B56CA8141BE5520C007B6A6E = {
 			isa = PBXGroup;
 			children = (
+				B55EB4E21BE6090400EA6136 /* sound.caf */,
 				B56CA81F1BE5520D007B6A6E /* Casper */,
 				B56CA8341BE5520D007B6A6E /* CasperTests */,
 				B56CA83F1BE5520D007B6A6E /* CasperUITests */,
@@ -390,6 +395,7 @@
 			files = (
 				B56CA82B1BE5520D007B6A6E /* LaunchScreen.storyboard in Resources */,
 				B56CA8281BE5520D007B6A6E /* Assets.xcassets in Resources */,
+				B55EB4E31BE6090400EA6136 /* sound.caf in Resources */,
 				B56CA8531BE5D033007B6A6E /* UI.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5E3B4221BE5F4A900E6865E /* Assets.xcassets in Resources */,
+				B5E3B4441BE606FD00E6865E /* Assets.xcassets in Resources */,
 				B5E3B4201BE5F4A900E6865E /* Interface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +428,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5E3B4431BE606F900E6865E /* Assets.xcassets in Resources */,
 				B5E3B4361BE5F4A900E6865E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,6 +791,7 @@
 				B5E3B43E1BE5F4A900E6865E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B5E3B4411BE5F4A900E6865E /* Build configuration list for PBXNativeTarget "CasperWatch" */ = {
 			isa = XCConfigurationList;
@@ -791,6 +800,7 @@
 				B5E3B43C1BE5F4A900E6865E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
