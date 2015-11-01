@@ -408,6 +408,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Casper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -419,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Casper/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -492,6 +494,7 @@
 				B56CA8471BE5520D007B6A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B56CA8481BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperTests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +503,7 @@
 				B56CA84A1BE5520D007B6A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B56CA84B1BE5520D007B6A6E /* Build configuration list for PBXNativeTarget "CasperUITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +512,7 @@
 				B56CA84D1BE5520D007B6A6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
