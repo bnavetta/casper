@@ -10,11 +10,11 @@ import UIKit
 
 class AlarmViewController: UIViewController {
     
-    var answer: Int?
+    var alarm: Alarm?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("The answer is \(answer)")
+        print("Alarm: \(alarm)")
         // Do any additional setup after loading the view, typically from a nib.
     }
     

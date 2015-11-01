@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M8a-Us-z70">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Set Alarm-->
@@ -17,23 +19,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-Fi-SH1">
-                                <rect key="frame" x="256" y="285" width="88" height="30"/>
+                                <rect key="frame" x="264" y="285" width="72" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Hello, World!"/>
+                                <state key="normal" title="I'm Ready!"/>
                                 <connections>
                                     <action selector="onStart:" destination="M8a-Us-z70" eventType="touchUpInside" id="BYv-Va-smx"/>
                                 </connections>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qqD-Jf-crE">
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                                <animations/>
+                                <date key="date" timeIntervalSinceReferenceDate="468053961.02699">
+                                    <!--2015-11-01 06:59:21 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="qqD-Jf-crE" firstAttribute="centerX" secondItem="rtp-pT-HQw" secondAttribute="centerX" id="Nje-vY-q4V"/>
+                            <constraint firstItem="qqD-Jf-crE" firstAttribute="top" secondItem="rtp-pT-HQw" secondAttribute="topMargin" id="X1U-zR-ZQM"/>
                             <constraint firstItem="7dF-Fi-SH1" firstAttribute="centerX" secondItem="rtp-pT-HQw" secondAttribute="centerX" id="bYy-lb-QN2"/>
                             <constraint firstItem="7dF-Fi-SH1" firstAttribute="centerY" secondItem="rtp-pT-HQw" secondAttribute="centerY" id="yTQ-F7-PAZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="A3S-dh-Ncz"/>
                     <connections>
+                        <outlet property="timePicker" destination="qqD-Jf-crE" id="wc6-jS-yOc"/>
                         <segue destination="IyX-nK-9js" kind="show" identifier="showAlarm" id="mGL-48-EUQ"/>
                     </connections>
                 </viewController>

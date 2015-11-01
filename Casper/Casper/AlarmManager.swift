@@ -40,6 +40,8 @@ class AlarmManager {
                 continue;
             }
             
+            // TODO: filter out notifications that are too close together
+            
             print("Notification scheduled at \(AlarmManager.dateFormatter.stringFromDate(schedule.fireDate))")
             
             let notification = UILocalNotification()

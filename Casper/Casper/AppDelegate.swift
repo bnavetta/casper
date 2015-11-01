@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.registerUserNotificationSettings(
             UIUserNotificationSettings(forTypes: [ .Alert, .Sound, .Badge], categories: nil))
@@ -22,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Launched from notification: \(notification)")
         }
        
-        let alarm = Alarm(time: NSDate(timeIntervalSinceNow: 20*60), warmupTime: 20)
-        AlarmManager.sharedInstance.schedule(alarm)
+//        let alarm = Alarm(time: NSDate(timeIntervalSinceNow: 20*60), warmupTime: 20)
+//        AlarmManager.sharedInstance.schedule(alarm)
         
         return true
     }
