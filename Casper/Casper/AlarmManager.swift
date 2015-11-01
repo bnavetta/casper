@@ -49,7 +49,7 @@ class AlarmManager {
             notification.timeZone = NSTimeZone.defaultTimeZone()
             notification.alertTitle = "Wake Up"
             notification.alertBody = "Casper wants you to get up!"
-            notification.category = "ALARM"
+            notification.category = "alarm"
             notification.soundName = alert.soundName
             UIApplication.sharedApplication().scheduleLocalNotification(notification)
         }
@@ -60,6 +60,37 @@ class AlarmManager {
             let minutesBefore = -Int(round(timeBefore/60))
             let alert = Alert(timeBefore: minutesBefore, interval: 1, soundName: UILocalNotificationDefaultSoundName)
             createNotifications(alert, alarm: alarm)
+        }
+    }
+    
+    func configureNotifications(application: UIApplication) {
+        let cancelAction = UIMutableUserNotificationAction()
+        cancelAction.title = "Cancel"
+        cancelAction.identifier = "cancel"
+        cancelAction.activationMode = .Background
+        cancelAction.authenticationRequired = false
+        
+        let dismissAction = UIMutableUserNotificationAction()
+        dismissAction.title = "Dismiss"
+        dismissAction.identifier = "dismiss"
+        dismissAction.activationMode = .Background
+        dismissAction.authenticationRequired = false
+        
+        let alarmCategory = UIMutableUserNotificationCategory()
+        alarmCategory.setActions([cancelAction, dismissAction], forContext: .Default)
+        alarmCategory.identifier = "alarm"
+        
+        application.registerUserNotificationSettings(
+            UIUserNotificationSettings(forTypes: [ .Alert, .Sound, .Badge], categories: [alarmCategory]))
+    }
+    
+    func handleAction(identifier: String) {
+        if identifier == "cancel" {
+            print("Canceling alarm")
+            UIApplication.sharedApplication().cancelAllLocalNotifications()
+        }
+        else if identifier == "dismiss" {
+            // nothing
         }
     }
 }

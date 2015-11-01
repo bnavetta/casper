@@ -14,8 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        application.registerUserNotificationSettings(
-            UIUserNotificationSettings(forTypes: [ .Alert, .Sound, .Badge], categories: nil))
+        
+        AlarmManager.sharedInstance.configureNotifications(application)
         
         if let launchOptions = launchOptions, notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] {
             print("Launched from notification: \(notification)")
@@ -25,6 +25,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        AlarmManager.sharedInstance.schedule(alarm)
         
         return true
+    }
+    
+    func application(application: UIApplication, handleActionWithIdentifier identifier: String?, forLocalNotification notification: UILocalNotification, completionHandler: () -> Void) {
+        if let identifier = identifier {
+            AlarmManager.sharedInstance.handleAction(identifier)
+        }
+        completionHandler()
     }
 
     func applicationWillResignActive(application: UIApplication) {

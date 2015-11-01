@@ -17,6 +17,14 @@
 		B56CA8511BE57808007B6A6E /* NotificationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8501BE57808007B6A6E /* NotificationUtils.swift */; };
 		B56CA8531BE5D033007B6A6E /* UI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8521BE5D033007B6A6E /* UI.storyboard */; };
 		B56CA8551BE5D479007B6A6E /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8541BE5D479007B6A6E /* AlarmViewController.swift */; };
+		B5E3B4201BE5F4A900E6865E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B41E1BE5F4A900E6865E /* Interface.storyboard */; };
+		B5E3B4221BE5F4A900E6865E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B4211BE5F4A900E6865E /* Assets.xcassets */; };
+		B5E3B4291BE5F4A900E6865E /* CasperWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B5E3B4281BE5F4A900E6865E /* CasperWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		B5E3B4301BE5F4A900E6865E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3B42F1BE5F4A900E6865E /* InterfaceController.swift */; };
+		B5E3B4321BE5F4A900E6865E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3B4311BE5F4A900E6865E /* ExtensionDelegate.swift */; };
+		B5E3B4341BE5F4A900E6865E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5E3B4331BE5F4A900E6865E /* NotificationController.swift */; };
+		B5E3B4361BE5F4A900E6865E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5E3B4351BE5F4A900E6865E /* Assets.xcassets */; };
+		B5E3B43A1BE5F4A900E6865E /* CasperWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = B5E3B41C1BE5F4A900E6865E /* CasperWatch.app */; };
 		E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6840A1BE584EB008CE732 /* AlarmDates.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +43,46 @@
 			remoteGlobalIDString = B56CA81C1BE5520C007B6A6E;
 			remoteInfo = Casper;
 		};
+		B5E3B42A1BE5F4A900E6865E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B56CA8151BE5520C007B6A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E3B4271BE5F4A900E6865E;
+			remoteInfo = "CasperWatch Extension";
+		};
+		B5E3B4381BE5F4A900E6865E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B56CA8151BE5520C007B6A6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5E3B41B1BE5F4A900E6865E;
+			remoteInfo = CasperWatch;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B5E3B4401BE5F4A900E6865E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				B5E3B4291BE5F4A900E6865E /* CasperWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E3B4421BE5F4A900E6865E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				B5E3B43A1BE5F4A900E6865E /* CasperWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		B56CA81D1BE5520D007B6A6E /* Casper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +101,17 @@
 		B56CA8501BE57808007B6A6E /* NotificationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtils.swift; sourceTree = "<group>"; };
 		B56CA8521BE5D033007B6A6E /* UI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UI.storyboard; sourceTree = "<group>"; };
 		B56CA8541BE5D479007B6A6E /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		B5E3B41C1BE5F4A900E6865E /* CasperWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CasperWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E3B41F1BE5F4A900E6865E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		B5E3B4211BE5F4A900E6865E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5E3B4231BE5F4A900E6865E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5E3B4281BE5F4A900E6865E /* CasperWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "CasperWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5E3B42E1BE5F4A900E6865E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		B5E3B42F1BE5F4A900E6865E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		B5E3B4311BE5F4A900E6865E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		B5E3B4331BE5F4A900E6865E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		B5E3B4351BE5F4A900E6865E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5E3B4371BE5F4A900E6865E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E6840A1BE584EB008CE732 /* AlarmDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,6 +137,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E3B4251BE5F4A900E6865E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +153,8 @@
 				B56CA81F1BE5520D007B6A6E /* Casper */,
 				B56CA8341BE5520D007B6A6E /* CasperTests */,
 				B56CA83F1BE5520D007B6A6E /* CasperUITests */,
+				B5E3B41D1BE5F4A900E6865E /* CasperWatch */,
+				B5E3B42C1BE5F4A900E6865E /* CasperWatch Extension */,
 				B56CA81E1BE5520D007B6A6E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,6 +165,8 @@
 				B56CA81D1BE5520D007B6A6E /* Casper.app */,
 				B56CA8311BE5520D007B6A6E /* CasperTests.xctest */,
 				B56CA83C1BE5520D007B6A6E /* CasperUITests.xctest */,
+				B5E3B41C1BE5F4A900E6865E /* CasperWatch.app */,
+				B5E3B4281BE5F4A900E6865E /* CasperWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -137,6 +206,37 @@
 			path = CasperUITests;
 			sourceTree = "<group>";
 		};
+		B5E3B41D1BE5F4A900E6865E /* CasperWatch */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3B41E1BE5F4A900E6865E /* Interface.storyboard */,
+				B5E3B4211BE5F4A900E6865E /* Assets.xcassets */,
+				B5E3B4231BE5F4A900E6865E /* Info.plist */,
+			);
+			path = CasperWatch;
+			sourceTree = "<group>";
+		};
+		B5E3B42C1BE5F4A900E6865E /* CasperWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3B42F1BE5F4A900E6865E /* InterfaceController.swift */,
+				B5E3B4311BE5F4A900E6865E /* ExtensionDelegate.swift */,
+				B5E3B4331BE5F4A900E6865E /* NotificationController.swift */,
+				B5E3B4351BE5F4A900E6865E /* Assets.xcassets */,
+				B5E3B4371BE5F4A900E6865E /* Info.plist */,
+				B5E3B42D1BE5F4A900E6865E /* Supporting Files */,
+			);
+			path = "CasperWatch Extension";
+			sourceTree = "<group>";
+		};
+		B5E3B42D1BE5F4A900E6865E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5E3B42E1BE5F4A900E6865E /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,10 +247,12 @@
 				B56CA8191BE5520C007B6A6E /* Sources */,
 				B56CA81A1BE5520C007B6A6E /* Frameworks */,
 				B56CA81B1BE5520C007B6A6E /* Resources */,
+				B5E3B4421BE5F4A900E6865E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B5E3B4391BE5F4A900E6865E /* PBXTargetDependency */,
 			);
 			name = Casper;
 			productName = Casper;
@@ -193,6 +295,40 @@
 			productReference = B56CA83C1BE5520D007B6A6E /* CasperUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		B5E3B41B1BE5F4A900E6865E /* CasperWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E3B4411BE5F4A900E6865E /* Build configuration list for PBXNativeTarget "CasperWatch" */;
+			buildPhases = (
+				B5E3B41A1BE5F4A900E6865E /* Resources */,
+				B5E3B4401BE5F4A900E6865E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5E3B42B1BE5F4A900E6865E /* PBXTargetDependency */,
+			);
+			name = CasperWatch;
+			productName = CasperWatch;
+			productReference = B5E3B41C1BE5F4A900E6865E /* CasperWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		B5E3B4271BE5F4A900E6865E /* CasperWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5E3B43F1BE5F4A900E6865E /* Build configuration list for PBXNativeTarget "CasperWatch Extension" */;
+			buildPhases = (
+				B5E3B4241BE5F4A900E6865E /* Sources */,
+				B5E3B4251BE5F4A900E6865E /* Frameworks */,
+				B5E3B4261BE5F4A900E6865E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CasperWatch Extension";
+			productName = "CasperWatch Extension";
+			productReference = B5E3B4281BE5F4A900E6865E /* CasperWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -215,6 +351,14 @@
 						CreatedOnToolsVersion = 7.1;
 						TestTargetID = B56CA81C1BE5520C007B6A6E;
 					};
+					B5E3B41B1BE5F4A900E6865E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4DZ6WR8NFF;
+					};
+					B5E3B4271BE5F4A900E6865E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 4DZ6WR8NFF;
+					};
 				};
 			};
 			buildConfigurationList = B56CA8181BE5520C007B6A6E /* Build configuration list for PBXProject "Casper" */;
@@ -233,6 +377,8 @@
 				B56CA81C1BE5520C007B6A6E /* Casper */,
 				B56CA8301BE5520D007B6A6E /* CasperTests */,
 				B56CA83B1BE5520D007B6A6E /* CasperUITests */,
+				B5E3B41B1BE5F4A900E6865E /* CasperWatch */,
+				B5E3B4271BE5F4A900E6865E /* CasperWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -259,6 +405,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E3B41A1BE5F4A900E6865E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E3B4221BE5F4A900E6865E /* Assets.xcassets in Resources */,
+				B5E3B4201BE5F4A900E6865E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5E3B4261BE5F4A900E6865E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E3B4361BE5F4A900E6865E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +457,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B5E3B4241BE5F4A900E6865E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5E3B4341BE5F4A900E6865E /* NotificationController.swift in Sources */,
+				B5E3B4321BE5F4A900E6865E /* ExtensionDelegate.swift in Sources */,
+				B5E3B4301BE5F4A900E6865E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -307,6 +480,16 @@
 			target = B56CA81C1BE5520C007B6A6E /* Casper */;
 			targetProxy = B56CA83D1BE5520D007B6A6E /* PBXContainerItemProxy */;
 		};
+		B5E3B42B1BE5F4A900E6865E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E3B4271BE5F4A900E6865E /* CasperWatch Extension */;
+			targetProxy = B5E3B42A1BE5F4A900E6865E /* PBXContainerItemProxy */;
+		};
+		B5E3B4391BE5F4A900E6865E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5E3B41B1BE5F4A900E6865E /* CasperWatch */;
+			targetProxy = B5E3B4381BE5F4A900E6865E /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -316,6 +499,14 @@
 				B56CA82A1BE5520D007B6A6E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		B5E3B41E1BE5F4A900E6865E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5E3B41F1BE5F4A900E6865E /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -482,6 +673,70 @@
 			};
 			name = Release;
 		};
+		B5E3B43B1BE5F4A900E6865E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = CasperWatch_Extension;
+				INFOPLIST_FILE = CasperWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B5E3B43C1BE5F4A900E6865E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = CasperWatch_Extension;
+				INFOPLIST_FILE = CasperWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		B5E3B43D1BE5F4A900E6865E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CasperWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		B5E3B43E1BE5F4A900E6865E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "CasperWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.casper.Casper.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -520,6 +775,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B5E3B43F1BE5F4A900E6865E /* Build configuration list for PBXNativeTarget "CasperWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E3B43D1BE5F4A900E6865E /* Debug */,
+				B5E3B43E1BE5F4A900E6865E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B5E3B4411BE5F4A900E6865E /* Build configuration list for PBXNativeTarget "CasperWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5E3B43B1BE5F4A900E6865E /* Debug */,
+				B5E3B43C1BE5F4A900E6865E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
