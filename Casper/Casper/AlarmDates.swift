@@ -9,9 +9,9 @@
 import Foundation
 
 // I/P : num, a certain number of minutes before the final wake-up time
-// O/P : a list where each element is a double representing the number of
-//       minutes before wake-up time an alarm is set to go off
-func distances(num: Double) -> Array<Double> {
+// O/P : a list where each element is an NSTimeInterval representing the
+//       number of seconds after wake-up time an alarm is set to go off
+func distances(num: Double) -> Array<NSTimeInterval> {
     var fSeq = [1.0,1.0]
     while fSeq.last < num {
         if fSeq[fSeq.count - 2] + fSeq.last! <= num {
@@ -20,7 +20,7 @@ func distances(num: Double) -> Array<Double> {
     }
     let scalar = fSeq.last! / num
     for (index, element) in fSeq.enumerate() {
-        fSeq[index] = scalar * element
+        fSeq[index] = NSTimeInterval(-60 * scalar * element)
     }
     return fSeq
 }
