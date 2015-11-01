@@ -24,3 +24,15 @@ Basic idea: gradual alarm clock app
     * Different repeat intervals for each one
     * Will gradually build on each other to be continuous by the end
 * Typing in the code -> cancel all notifications
+
+# TODO
+
+* Completing alarm
+* State persistence
+    * One alarm at a time - NSUserDefaults
+    * Make sure we don't schedule notifications again
+* Configurable wakeup period
+* Variable sounds
+* Haptic feedback / Apple Watch notifications
+* Alarm screen
+    * Should also handle notifications while app open

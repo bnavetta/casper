@@ -68,7 +68,8 @@ class AlarmManager {
         cancelAction.title = "Cancel"
         cancelAction.identifier = "cancel"
         cancelAction.activationMode = .Background
-        cancelAction.authenticationRequired = false
+        cancelAction.authenticationRequired = true // prevent canceling while still asleep - need to Touch ID or enter passcode
+        cancelAction.destructive = true // oversleeping can be dangerous
         
         let dismissAction = UIMutableUserNotificationAction()
         dismissAction.title = "Dismiss"
