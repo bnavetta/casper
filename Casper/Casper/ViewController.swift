@@ -19,7 +19,22 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func onStart(sender: UIButton) {
+        self.showAlarm()
+    }
 
-
+    func showAlarm() {
+        print("Transitioning!")
+        performSegueWithIdentifier("showAlarm", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("From \(segue.sourceViewController) to \(segue.destinationViewController)")
+        
+        if let vc = segue.destinationViewController as? AlarmViewController {
+            vc.answer = 42
+        }
+    }
 }
 

@@ -17,6 +17,7 @@
 		B56CA84F1BE555F9007B6A6E /* AlarmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA84E1BE555F9007B6A6E /* AlarmManager.swift */; };
 		B56CA8511BE57808007B6A6E /* NotificationUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8501BE57808007B6A6E /* NotificationUtils.swift */; };
 		B56CA8531BE5D033007B6A6E /* UI.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B56CA8521BE5D033007B6A6E /* UI.storyboard */; };
+		B56CA8551BE5D479007B6A6E /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56CA8541BE5D479007B6A6E /* AlarmViewController.swift */; };
 		E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E6840A1BE584EB008CE732 /* AlarmDates.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		B56CA84E1BE555F9007B6A6E /* AlarmManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmManager.swift; sourceTree = "<group>"; };
 		B56CA8501BE57808007B6A6E /* NotificationUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationUtils.swift; sourceTree = "<group>"; };
 		B56CA8521BE5D033007B6A6E /* UI.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = UI.storyboard; sourceTree = "<group>"; };
+		B56CA8541BE5D479007B6A6E /* AlarmViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		E1E6840A1BE584EB008CE732 /* AlarmDates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlarmDates.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			children = (
 				B56CA8201BE5520D007B6A6E /* AppDelegate.swift */,
 				B56CA8221BE5520D007B6A6E /* ViewController.swift */,
+				B56CA8541BE5D479007B6A6E /* AlarmViewController.swift */,
 				B56CA8241BE5520D007B6A6E /* Main.storyboard */,
 				B56CA8271BE5520D007B6A6E /* Assets.xcassets */,
 				B56CA8291BE5520D007B6A6E /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 			files = (
 				B56CA8231BE5520D007B6A6E /* ViewController.swift in Sources */,
 				B56CA8211BE5520D007B6A6E /* AppDelegate.swift in Sources */,
+				B56CA8551BE5D479007B6A6E /* AlarmViewController.swift in Sources */,
 				E1E6840B1BE584EB008CE732 /* AlarmDates.swift in Sources */,
 				B56CA8511BE57808007B6A6E /* NotificationUtils.swift in Sources */,
 				B56CA84F1BE555F9007B6A6E /* AlarmManager.swift in Sources */,

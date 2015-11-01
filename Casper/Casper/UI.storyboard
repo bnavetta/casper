@@ -1,26 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MYD-5s-yDs">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="M8a-Us-z70">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="Ovh-gV-yyB">
-            <objects>
-                <navigationController id="MYD-5s-yDs" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gpS-p4-efh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="M8a-Us-z70" kind="relationship" relationship="rootViewController" id="1MW-Lf-ty1"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l2n-p6-T1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-652" y="216"/>
-        </scene>
         <!--Set Alarm-->
         <scene sceneID="kJH-Ag-Lng">
             <objects>
@@ -33,8 +16,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ScH-7b-ISr">
-                                <rect key="frame" x="251" y="289" width="98" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dF-Fi-SH1">
+                                <rect key="frame" x="256" y="285" width="88" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Hello, World!"/>
+                                <connections>
+                                    <action selector="onStart:" destination="M8a-Us-z70" eventType="touchUpInside" id="BYv-Va-smx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7dF-Fi-SH1" firstAttribute="centerX" secondItem="rtp-pT-HQw" secondAttribute="centerX" id="bYy-lb-QN2"/>
+                            <constraint firstItem="7dF-Fi-SH1" firstAttribute="centerY" secondItem="rtp-pT-HQw" secondAttribute="centerY" id="yTQ-F7-PAZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="A3S-dh-Ncz"/>
+                    <connections>
+                        <segue destination="IyX-nK-9js" kind="show" identifier="showAlarm" id="mGL-48-EUQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEC-6g-9si" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="1046"/>
+        </scene>
+        <!--Alarm-->
+        <scene sceneID="Hdl-gW-yPs">
+            <objects>
+                <viewController title="Alarm" id="IyX-nK-9js" customClass="AlarmViewController" customModule="Casper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="liJ-5K-FOM"/>
+                        <viewControllerLayoutGuide type="bottom" id="73N-Wi-g0b"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U6j-qM-Aqz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I'm an alarm" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJT-hz-sCI">
+                                <rect key="frame" x="254" y="290" width="92.5" height="20.5"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -44,13 +64,12 @@
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ScH-7b-ISr" firstAttribute="centerX" secondItem="rtp-pT-HQw" secondAttribute="centerX" id="B7x-e9-aUp"/>
-                            <constraint firstItem="ScH-7b-ISr" firstAttribute="centerY" secondItem="rtp-pT-HQw" secondAttribute="centerY" id="bsq-Mb-0GN"/>
+                            <constraint firstItem="MJT-hz-sCI" firstAttribute="centerX" secondItem="U6j-qM-Aqz" secondAttribute="centerX" id="SkB-gb-lk6"/>
+                            <constraint firstItem="MJT-hz-sCI" firstAttribute="centerY" secondItem="U6j-qM-Aqz" secondAttribute="centerY" id="mHP-H6-LKP"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="A3S-dh-Ncz"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tEC-6g-9si" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="11w-Dk-Obq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
