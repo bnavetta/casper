@@ -25,6 +25,11 @@ class AlarmManager {
     
     private func createNotifications(alert: Alert, alarm: Alarm) {
         for schedule in notificationSchedules(alarm.time.dateByAddingTimeInterval(-alert.timeBefore), interval: alert.interval) {
+            
+            if schedule.fireDate.compare(NSDate()) == .OrderedDescending {
+                continue;
+            }
+            
             let notification = UILocalNotification()
             notification.fireDate = schedule.fireDate
             notification.timeZone = NSTimeZone.defaultTimeZone()
@@ -39,6 +44,7 @@ class AlarmManager {
     
     func schedule(alarm: Alarm) {
         for timeBefore in distances(Double(alarm.warmupTime)) {
+            print("Scheduling \(timeBefore) minutes before")
             let alert = Alert(timeBefore: timeBefore, interval: 0, soundName: UILocalNotificationDefaultSoundName)
             createNotifications(alert, alarm: alarm)
         }
