@@ -9,32 +9,38 @@
 import Foundation
 import UIKit
 
+struct Alert {
+    let timeBefore: NSTimeInterval // how long before the start date to start sending this alert
+    let interval: Int // time between notifications, in minutes
+    let soundName: String
+}
+
 struct Alarm {
     let time: NSDate
+    let warmupTime: Int // minutes before alarm time to start waking up
 }
 
 class AlarmManager {
     static let sharedInstance = AlarmManager()
     
-    func schedule(alarm: Alarm) {
-        let notification = UILocalNotification()
-        notification.fireDate = alarm.time
-        notification.timeZone = NSTimeZone.defaultTimeZone()
-        notification.alertTitle = "Wake Up!"
-        notification.alertBody = "NOW."
-//        notification.alertAction = "shut off"
-        notification.category = "ALARM"
-        notification.repeatInterval = .Minute
-        
-        notification.soundName = UILocalNotificationDefaultSoundName // or a file name in the main bundle (< 30sec)
-//        notification.userInfo = ["alarm": alarm] // need an ObjC object
-        UIApplication.sharedApplication().scheduleLocalNotification(notification)
+    private func createNotifications(alert: Alert, alarm: Alarm) {
+        for schedule in notificationSchedules(alarm.time.dateByAddingTimeInterval(-alert.timeBefore), interval: alert.interval) {
+            let notification = UILocalNotification()
+            notification.fireDate = schedule.fireDate
+            notification.timeZone = NSTimeZone.defaultTimeZone()
+            notification.alertTitle = "Wake Up"
+            notification.alertBody = "Casper wants you to get up!"
+            notification.category = "ALARM"
+//            notification.repeatInterval = schedule.repeatInterval
+            notification.soundName = alert.soundName
+            UIApplication.sharedApplication().scheduleLocalNotification(notification)
+        }
     }
-
-    // Creates UILocalNotifcations for a given list of NSDates.
-    func setAlarms(dates: Array<NSDate>) {
-        for date in dates {
-            schedule(Alarm(time:date))
+    
+    func schedule(alarm: Alarm) {
+        for timeBefore in distances(Double(alarm.warmupTime)) {
+            let alert = Alert(timeBefore: timeBefore, interval: 0, soundName: UILocalNotificationDefaultSoundName)
+            createNotifications(alert, alarm: alarm)
         }
     }
 }
