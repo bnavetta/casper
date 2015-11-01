@@ -43,15 +43,15 @@ class AlarmManager {
         notification.timeZone = NSTimeZone.defaultTimeZone()
         notification.alertTitle = "Wake Up!"
         notification.alertBody = "NOW."
-//        notification.alertAction = "shut off"
+        //        notification.alertAction = "shut off"
         notification.category = "ALARM"
         notification.repeatInterval = .Minute
         
         notification.soundName = UILocalNotificationDefaultSoundName // or a file name in the main bundle (< 30sec)
-//        notification.userInfo = ["alarm": alarm] // need an ObjC object
+        //        notification.userInfo = ["alarm": alarm] // need an ObjC object
         UIApplication.sharedApplication().scheduleLocalNotification(notification)
     }
-
+    
     // Creates UILocalNotifcations for a given list of NSDates.
     func setAlarms(dates: Array<NSDate>) {
         for date in dates {
