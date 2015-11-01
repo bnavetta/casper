@@ -21,6 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if let launchOptions = launchOptions, notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey] {
             print("Launched from notification: \(notification)")
         }
+       
+        let alarm = Alarm(time: NSDate(timeIntervalSinceNow: 10*60), alerts: [
+            Alert(timeBefore: 30*60, interval: 5, soundName: UILocalNotificationDefaultSoundName)])
+        AlarmManager.sharedInstance.schedule(alarm)
+        print("Notifications: \(UIApplication.sharedApplication().scheduledLocalNotifications)")
         
         return true
     }

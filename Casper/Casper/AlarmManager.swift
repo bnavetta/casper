@@ -55,7 +55,7 @@ class AlarmManager {
     // Creates UILocalNotifcations for a given list of NSDates.
     func setAlarms(dates: Array<NSDate>) {
         for date in dates {
-            schedule(Alarm(time:date))
+//            schedule(Alarm(time:date))
         }
     }
 }
